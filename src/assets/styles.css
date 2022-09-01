@@ -1,4 +1,4 @@
-/* [Master Stylesheet v1.0] */
+/* [Master Style sheet v1.0] */
 /* :: :: 1.0 Import Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900|Open+Sans:400,600,700');
 /* :: 2.0 Import All CSS */
@@ -569,145 +569,6 @@ textarea:focus {
   button:hover {
   background-color: #292929;
   color: #ffaf02;
-}
-
-.megamenu-slides .owl-prev,
-.megamenu-slides .owl-next {
-  background: #0d104d;
-  background: -webkit-linear-gradient(to right, #0d104d, #28408b);
-  background: linear-gradient(to right, #0d104d, #28408b);
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  color: #ffffff;
-  top: 50%;
-  margin-top: -15px;
-  left: 5%;
-  position: absolute;
-  z-index: 10;
-  text-align: center;
-  font-size: 18px;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-}
-.megamenu-slides .owl-next {
-  left: auto;
-  right: 5%;
-}
-
-/* :: 6.0 Welcome Area CSS */
-.hero-slides {
-  position: relative;
-  z-index: 1;
-}
-.hero-slides .single-hero-slide {
-  width: 100%;
-  height: 850px;
-  position: relative;
-  z-index: 1;
-  background: #0d104d;
-  background: -webkit-linear-gradient(to right, #0d104d, #28408b);
-  background: linear-gradient(to right, #0d104d, #28408b);
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .hero-slides .single-hero-slide {
-    height: 650px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .hero-slides .single-hero-slide {
-    height: 600px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .hero-slides .single-hero-slide {
-    height: 800px;
-  }
-}
-.hero-slides .single-hero-slide h2 {
-  font-size: 68px;
-  color: #ffffff;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .hero-slides .single-hero-slide h2 {
-    font-size: 48px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .hero-slides .single-hero-slide h2 {
-    font-size: 42px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .hero-slides .single-hero-slide h2 {
-    font-size: 30px;
-  }
-}
-.hero-slides .single-hero-slide h2 span {
-  color: #ffaf02;
-}
-.hero-slides .single-hero-slide h6 {
-  color: #ffffff;
-  margin-bottom: 60px;
-  line-height: 2;
-  font-weight: 400;
-}
-.hero-slides .single-hero-slide .hero-slides-thumb img {
-  width: 100%;
-}
-@media only screen and (max-width: 767px) {
-  .hero-slides .single-hero-slide .hero-slides-thumb img {
-    width: 60%;
-    margin: 0 auto;
-  }
-}
-.hero-slides .owl-prev,
-.hero-slides .owl-next {
-  background-color: #eef3f6;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  color: #292929;
-  top: 50%;
-  margin-top: -20px;
-  left: 5%;
-  position: absolute;
-  z-index: 10;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 400;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-  border-bottom: 2px solid #ffaf02;
-}
-@media only screen and (max-width: 767px) {
-  .hero-slides .owl-prev,
-  .hero-slides .owl-next {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    margin-top: -20px;
-  }
-}
-.hero-slides .owl-prev:hover,
-.hero-slides .owl-prev:focus,
-.hero-slides .owl-next:hover,
-.hero-slides .owl-next:focus {
-  background-color: #292929;
-  color: #ffaf02;
-}
-.hero-slides .owl-next {
-  left: auto;
-  right: 5%;
-}
-.hero-slides:hover .owl-prev,
-.hero-slides:hover .owl-next {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* :: 7.0 Feature Area CSS */
@@ -1672,3 +1533,210 @@ textarea:focus {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .classynav ul li a {
+    padding: 0 2px;
+    display: block;
+    height: 35px;
+    font-size: 9px;
+  }
+  .subscribeField {
+    margin-top: 20px;
+  }
+  .mat-4 {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 400px) and (max-width: 500px) {
+  .classynav ul li a {
+    padding: 0 5px;
+    display: block;
+    height: 35px;
+    font-size: 11px;
+  }
+  .subscribeField {
+    margin-top: 20px;
+  }
+  .mat-4 {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  .classynav ul li a {
+    padding: 0 5px;
+    display: block;
+    height: 35px;
+    font-size: 11px;
+  }
+  .subscribeField {
+    margin-top: 20px;
+  }
+  .mat-4 {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+  .classynav ul li a {
+    padding: 0 5px;
+    display: block;
+    height: 35px;
+    font-size: 11px;
+  }
+  .subscribeField {
+    margin-top: 20px;
+  }
+  .mat-4 {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+  .classynav ul li a {
+    padding: 0 5px;
+    display: block;
+    height: 35px;
+    font-size: 11px;
+  }
+  .subscribeField {
+    margin-top: 20px;
+  }
+  .mat-4 {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+  .classynav ul li a {
+    padding: 0 5px;
+    display: block;
+    height: 35px;
+    font-size: 11px;
+  }
+  .subscribeField {
+    margin-top: 20px;
+  }
+  .mat-4 {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+  .classynav ul li a {
+    padding: 0 5px;
+    display: block;
+    height: 35px;
+    font-size: 11px;
+  }
+  .subscribeField {
+    margin-top: 20px;
+  }
+  .mat-4 {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .classynav ul li a {
+    padding: 0 5px;
+    display: block;
+    height: 35px;
+    font-size: 11px;
+  }
+
+  .mat-4 {
+    margin-top: 10px;
+  }
+}
+.subscribeField {
+  z-index: 10;
+  font-size: 12px;
+  color: #ffaf02;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+  font-weight: 300;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  background-color: #0000000d;
+}
+
+.header-newsletter-form {
+  width: 100%;
+  height: 35px;
+  border: none;
+  background-color: #0000000d;
+  font-size: 12px !important;
+  font-style: italic;
+  border-bottom: 1px solid #ffaf02;
+}
+
+@media (max-width: 1024px) {
+  .coingecko-table .coin-table .cg-sticky-third-col {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    left: 63px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .coingecko-table .coin-table .cg-sticky-col,
+  .coingecko-table .coin-table .cg-sticky-col-header {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #fff;
+  }
+}
+
+.coingecko-table .table td {
+  padding: 5px 8px;
+  height: 30px;
+  font-size: 0.875rem;
+  vertical-align: middle;
+}
+.table td,
+.table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.Auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.Auth-form {
+  width: 620px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.Auth-form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}

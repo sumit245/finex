@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 export default function NavBar() {
   return (
     <header className="header-area">
@@ -12,16 +12,16 @@ export default function NavBar() {
                 {/* Top Headline */}
                 <div className="top-headline">
                   <p>
-                    Welcome to <span>Cryptos</span>
+                    Welcome to <span>Finexp</span>
                   </p>
                 </div>
                 {/* Top Login & Faq & Earn Monery btn */}
                 <div className="login-faq-earn-money">
-                  <a href="#">Login | Register</a>
-                  <a href="#">FAQ</a>
-                  <a href="#" className="active">
+                  <Link to="/login">Login | Register</Link>
+                  <Link to="/faq">FAQ</Link>
+                  <Link to="/earn" className="active">
                     Earn Money
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -29,64 +29,75 @@ export default function NavBar() {
         </div>
       </div>
       {/* Navbar Area */}
-      <div className="cryptos-main-menu">
+      <div className="cryptos-main-menu mt-5">
         <div className="classy-nav-container breakpoint-off">
           <div className="container">
             {/* Menu */}
-            <nav
-              className="classy-navbar justify-content-between"
-              id="cryptosNav"
-            >
-              {/* Logo */}
-              <a className="nav-brand" href="index.html">
-                <img src={require('../assets/img/logo.png')} alt="" />
-              </a>
-              {/* Navbar Toggler */}
-              <div className="classy-navbar-toggler">
-                <span className="navbarToggler">
-                  <span />
-                  <span />
-                  <span />
-                </span>
+
+            <div className="row">
+              <div className="col-6 col-sm-6 col-md-6 ">
+                {/* Logo */}
+                <Link className="nav-brand" to="/">
+                  <img src={require('../assets/img/logo.png')} alt="" />
+                </Link>
               </div>
-              {/* Menu */}
-              <div className="classy-menu">
-                {/* close btn */}
-                <div className="classycloseIcon">
-                  <div className="cross-wrap">
-                    <span className="top" />
-                    <span className="bottom" />
-                  </div>
-                </div>
+              <div className="col-6 col-sm-3 col-md-3 ">
                 {/* Nav Start */}
                 <div className="classynav">
                   <ul>
                     <li>
-                      <a href="index.html">Invest</a>
+                      <Link to="/invest">Invest</Link>
                     </li>
                     <li>
-                      <a href="#">Remit</a>
+                      <Link to="/remit">Remit</Link>
                     </li>
                     <li>
-                      <a href="#">Features</a>
+                      <Link to="/features">Features</Link>
                     </li>
                   </ul>
-                  {/* Newsletter Form */}
-                  <div className="header-newsletter-form">
-                    <form action="#" method="post">
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Newsletter"
-                      />
-                      <button type="submit">Subscribe</button>
-                    </form>
-                  </div>
                 </div>
-                {/* Nav End */}
               </div>
-            </nav>
+              <div className="col-12 col-sm-3 col-md-3">
+                {/* Newsletter Form */}
+                <form action="#" method="post" className="d-flex mat-4">
+                  <input
+                    className="form-control subscribeField "
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Newsletter"
+                  />
+                  <button
+                    type="submit"
+                    className="subscribeField header-newsletter-form "
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            {/* Navbar Toggler */}
+            <div className="classy-navbar-toggler">
+              <span className="navbarToggler">
+                <span />
+                <span />
+                <span />
+              </span>
+            </div>
+            {/* Menu */}
+            <div className="classy-menu">
+              {/* close btn */}
+              <div className="classycloseIcon">
+                <div className="cross-wrap">
+                  <span className="top" />
+                  <span className="bottom" />
+                </div>
+              </div>
+
+              {/* Nav End */}
+            </div>
+            {/* </nav> */}
           </div>
         </div>
       </div>

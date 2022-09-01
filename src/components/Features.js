@@ -2,20 +2,20 @@ import React from 'react';
 
 export default function Features() {
   return (
-    <div className="cryptos-feature-area section-padding-100-0">
+    <div className="cryptos-feature-area mt-5">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12">
-            <div className="section-heading text-center mx-auto">
-              <h3 className="text-uppercase fw-bold">
+          <div className="col-12 my-5 justify-content-center">
+            <div className="section-heading  mx-auto">
+              <h3 className="text-uppercase text-center fw-bold">
                 The World’s Fastest Growing Crypto App
               </h3>
-              <div className="text-justify mx-5">
+              <div className="text-justify">
                 <ul>
                   <li>
                     <h5 className="my-0 py-0">
                       <i
-                        class="fa fa-check-circle mx-2 text-primary"
+                        className="fa fa-check-circle mx-2 text-primary"
                         aria-hidden="true"
                       ></i>
                       Join <span className="text-primary"> 50M+</span> users
@@ -29,7 +29,7 @@ export default function Features() {
                   <li>
                     <h5 className="my-0 py-0">
                       <i
-                        class="fa fa-check-circle mx-2 text-primary"
+                        className="fa fa-check-circle mx-2 text-primary"
                         aria-hidden="true"
                       ></i>
                       Spend with the finexp.nl Visa Card and
@@ -39,7 +39,7 @@ export default function Features() {
                   <li>
                     <h5 className="my-0 py-0">
                       <i
-                        class="fa fa-check-circle mx-2 text-primary"
+                        className="fa fa-check-circle mx-2 text-primary"
                         aria-hidden="true"
                       ></i>
                       Grow your portfolio by

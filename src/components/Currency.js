@@ -39,15 +39,10 @@ export default function Currency() {
             <div className="section-heading text-center white mx-auto">
               <h3 className="mb-4">Cryptocurrency Calculator</h3>
               <h5 className="mb-2">
-                Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi.
-                Donec et sollicitudin est, in euismod erat. Ut at erat et arcu
-                pulvinar cursus a eget nisl.
+                
               </h5>
               <p>
-                Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi.
-                Donec et sollicitudin est, in euismod erat. Ut at erat et arcu
-                pulvinar cursus a eget nisl. Cras vitae turpis lacinia, lacinia
-                lacus non, fermentum nisi.
+                
               </p>
             </div>
           </div>

@@ -1,6 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Blog() {
+  const [data, setData] = useState([]);
+  const fetchDataFromApi = () => {
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'c68988b5d5msh5aeb7662f070019p1d530ajsnd9b993c6dda3',
+        'X-RapidAPI-Host': 'coingecko.p.rapidapi.com',
+      },
+    };
+    fetch(
+      'https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&page=1&per_page=10&order=market_cap_desc',
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        let exchangeData = response;
+        setData(exchangeData);
+      })
+      .catch((err) => console.error(err));
+  };
+
+  useEffect(() => {
+    let componentMounted = true;
+    if (componentMounted) {
+      setInterval(fetchDataFromApi(), 1000);
+    }
+    return () => {
+      componentMounted = false;
+      clearInterval();
+    };
+  }, [data]);
+
   return (
     <section className="cryptos-blog-area section-padding-100">
       <div className="container">
@@ -78,135 +110,30 @@ export default function Blog() {
           <div className="col-12 col-lg-5">
             <div className="cryptos-prices-table">
               {/* Single Price Table */}
-              <div className="single-price-table d-flex align-items-center justify-content-between">
-                <div className="p-content d-flex align-items-center">
-                  <span>01</span>
-                  <img src={require('../assets/img/bitcoin.png')} alt="" />
-                  <p>
-                    Bitcoin <span>BTC</span>
-                  </p>
-                </div>
-                <div className="price increase">
-                  <p>$12 456.78</p>
-                </div>
-              </div>
-              {/* Single Price Table */}
-              <div className="single-price-table d-flex align-items-center justify-content-between">
-                <div className="p-content d-flex align-items-center">
-                  <span>02</span>
-                  <img src={require('../assets/img/ethereum.png')} alt="" />
-                  <p>
-                    Ethereum <span>ETH</span>
-                  </p>
-                </div>
-                <div className="price increase">
-                  <p>$1051.98</p>
-                </div>
-              </div>
-              {/* Single Price Table */}
-              <div className="single-price-table d-flex align-items-center justify-content-between">
-                <div className="p-content d-flex align-items-center">
-                  <span>03</span>
-                  <img src={require('../assets/img/bitcoin-cash.png')} alt="" />
-                  <p>
-                    Bitcoin Cash <span>BCH</span>
-                  </p>
-                </div>
-                <div className="price decrease">
-                  <p>$2256.78</p>
-                </div>
-              </div>
-              {/* Single Price Table */}
-              <div className="single-price-table d-flex align-items-center justify-content-between">
-                <div className="p-content d-flex align-items-center">
-                  <span>04</span>
-                  <img src={require('../assets/img/ripple.png')} alt="" />
-                  <p>
-                    Ripple <span>XRP</span>
-                  </p>
-                </div>
-                <div className="price increase">
-                  <p>$2.03</p>
-                </div>
-              </div>
-              {/* Single Price Table */}
-              <div className="single-price-table d-flex align-items-center justify-content-between">
-                <div className="p-content d-flex align-items-center">
-                  <span>05</span>
-                  <img src={require('../assets/img/litecoin.png')} alt="" />
-                  <p>
-                    Litecoin <span>LTC</span>
-                  </p>
-                </div>
-                <div className="price increase">
-                  <p>$321.98</p>
-                </div>
-              </div>
-              {/* Single Price Table */}
-              <div className="single-price-table d-flex align-items-center justify-content-between">
-                <div className="p-content d-flex align-items-center">
-                  <span>06</span>
-                  <img src={require('../assets/img/cardano.png')} alt="" />
-                  <p>
-                    Cardano <span>ADA</span>
-                  </p>
-                </div>
-                <div className="price increase">
-                  <p>$0.75</p>
-                </div>
-              </div>
-              {/* Single Price Table */}
-              <div className="single-price-table d-flex align-items-center justify-content-between">
-                <div className="p-content d-flex align-items-center">
-                  <span>07</span>
-                  <img src={require('../assets/img/nem.png')} alt="" />
-                  <p>
-                    NEM <span>XEM</span>
-                  </p>
-                </div>
-                <div className="price increase">
-                  <p>$0.89</p>
-                </div>
-              </div>
-              {/* Single Price Table */}
-              <div className="single-price-table d-flex align-items-center justify-content-between">
-                <div className="p-content d-flex align-items-center">
-                  <span>08</span>
-                  <img src={require('../assets/img/neo.png')} alt="" />
-                  <p>
-                    NEO <span>NEO</span>
-                  </p>
-                </div>
-                <div className="price decrease">
-                  <p>$123.90</p>
-                </div>
-              </div>
-              {/* Single Price Table */}
-              <div className="single-price-table d-flex align-items-center justify-content-between">
-                <div className="p-content d-flex align-items-center">
-                  <span>09</span>
-                  <img src={require('../assets/img/stellar.png')} alt="" />
-                  <p>
-                    Stellar <span>XLM</span>
-                  </p>
-                </div>
-                <div className="price increase">
-                  <p>$0.67</p>
-                </div>
-              </div>
-              {/* Single Price Table */}
-              <div className="single-price-table d-flex align-items-center justify-content-between">
-                <div className="p-content d-flex align-items-center">
-                  <span>10</span>
-                  <img src={require('../assets/img/iota.png')} alt="" />
-                  <p>
-                    IOTA <span>IOT</span>
-                  </p>
-                </div>
-                <div className="price increase">
-                  <p>$3.55</p>
-                </div>
-              </div>
+              {Array.isArray(data) &&
+                data.map((item, key) => (
+                  <div
+                    className="single-price-table d-flex align-items-center justify-content-between"
+                    key={key}
+                  >
+                    <div className="p-content d-flex align-items-center">
+                      <span>{key + 1}</span>
+                      <img
+                        src={item.image}
+                        alt=""
+                        className="rounded mx-1"
+                        style={{ height: 20, width: 20 }}
+                      />
+                      <p>
+                        {item.name}{' '}
+                        <span className="text-uppercase">{item.symbol}</span>
+                      </p>
+                    </div>
+                    <div className={`price ${item.price_change_percentage_24h > 0 ? 'increase' : 'decrease'}`}>
+                      <p>${parseFloat(item.current_price).toFixed(2)}</p>
+                    </div>
+                  </div>
+                ))}
             </div>
           </div>
         </div>

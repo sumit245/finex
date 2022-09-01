@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
@@ -18,19 +19,13 @@ export default function About() {
                   <span>the world</span> together
                 </h3>
                 <h5>
-                  Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi.
-                  Donec et sollicitudin est, in euismod erat. Ut at erat et arcu
-                  pulvinar cursus a eget nisl.
-                </h5>
+                  Adding new dimension to financial market crypto had offered and revealed a new world of opportunity
+                  </h5>
                 <p>
-                  Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi.
-                  Donec et sollicitudin est, in euismod erat. Ut at erat et arcu
-                  pulvinar cursus a eget nisl. Cras vitae turpis lacinia,
-                  lacinia lacus non, fermentum nisi.
-                </p>
-                <a href="#" className="btn cryptos-btn mt-30">
+                  Cryto as a product had made new vibes ruling the rules as per market flows so go grab right move</p>
+                <Link to="/" className="btn cryptos-btn mt-30">
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
           </div>

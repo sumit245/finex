@@ -12,21 +12,22 @@ export default function ExchangeTable() {
       },
     };
     fetch(
-      'https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&page=1&per_page=100&order=market_cap_desc',
+      'https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&page=1&per_page=15&order=market_cap_desc',
       options
     )
       .then((response) => response.json())
       .then((response) => {
         let exchangeData = response;
-        exchangeData.length = 14;
         let flecoin = {
           image: 'https://flecoin.biz/assets/img/flecoin.png',
           name: 'FLECoin',
           symbol: 'FLC',
-          price_change_percentage_24h: 1.3456,
+          price_change_percentage_24h: ((0.013 - 0.01) / 0.013) * 100,
           total_volume: 223500,
-          current_price: 0.1456,
-          market_cap: 102239,
+          current_price: 0.013,
+          high_24h: 0.013,
+          low_24h: 0.01,
+          market_cap: 1000000,
         };
         exchangeData.push(flecoin);
         setData(exchangeData);
@@ -51,52 +52,72 @@ export default function ExchangeTable() {
         <h3>Cryptocurrency Prices by Market Cap</h3>
         <p>The global cryptocurrency market cap today is $1.11 Trillion</p>
       </div>
-      <table className="table table-dark my-4">
-        <thead>
-          <tr>
-            <td className="text-justify mx-4">Coin</td>
-            <td>Price</td>
-            <td>High 24H</td>
-            <td>Low 24H</td>
-            <td>Change 24H</td>
-            <td>Volume</td>
-            <td>Mkt Cap</td>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((row, key) => (
-            <tr key={key}>
-              <td>
-                <img
-                  src={row.image}
-                  className="rounded mx-1"
-                  style={{ height: 20, width: 20 }}
-                  alt="icon"
-                />
-                <span>
-                  <span className="mx-1">{row.name}</span>
-                  <small className="mx-1 text-uppercase mb-1">
-                    {row.symbol}
-                  </small>
-                </span>
-              </td>
-              <td>${row.current_price}</td>
-              <td>${row.high_24h}</td>
-              <td>${row.low_24h}</td>
-              <td
-                style={{
-                  color: row.price_change_percentage_24h > 0 ? 'green' : 'red',
-                }}
-              >
-                {parseFloat(row.price_change_percentage_24h).toFixed(4)}%
-              </td>
-              <td>${row.total_volume}</td>
-
-              <td>${row.market_cap}</td>
+      <div className="table-responsive">
+        <table className="table my-4">
+          <thead>
+            <tr>
+              <td className="text-justify mx-4">Coin</td>
+              <td className="col-sm-12"></td>
+              <td>Price</td>
+              <td>High 24H</td>
+              <td>Low 24H</td>
+              <td>Change 24H</td>
+              <td>Volume</td>
+              <td>Mkt Cap</td>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map((row, key) => (
+              <tr key={key}>
+                <td
+                  className="py-0 pr-4 pl-1 justify-content-start"
+                  colSpan={2}
+                >
+                  <div className="d-flex align-items-center">
+                    <img
+                      src={row.image}
+                      className="rounded mx-1"
+                      style={{ height: 20, width: 20 }}
+                      alt="icon"
+                    />
+                    <div className="flex-auto">
+                      <div className="row">
+                        <span
+                          className="fw-bold col-sm-12"
+                          style={{ fontSize: '0.8rem' }}
+                        >
+                          {row.name}
+                        </span>
+                        <small
+                          className="text-uppercase col-sm-12"
+                          style={{ fontSize: '0.8rem' }}
+                        >
+                          {row.symbol}
+                        </small>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td className="px-4">${row.current_price}</td>
+                <td className="px-4">${row.high_24h}</td>
+                <td className="px-4">${row.low_24h}</td>
+                <td
+                  style={{
+                    color:
+                      row.price_change_percentage_24h > 0 ? 'green' : 'red',
+                  }}
+                  className="px-4"
+                >
+                  {parseFloat(row.price_change_percentage_24h).toFixed(1)}%
+                </td>
+                <td className="px-4">${row.total_volume}</td>
+
+                <td className="px-4">${row.market_cap}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

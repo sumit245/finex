@@ -19,27 +19,18 @@ export default function Footer() {
                   </a>
                 </div>
                 <p>
-                  Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed
-                  faucibus mauris vitae urna consectetur, sit amet maximus nisl
-                  sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam
-                  tristique magna eget velit consectetur, a tincidunt velit
-                  dictum.
+                  Daily Analysis edge over fundamental and technical over crypto
+                  market watch an essential to reach and achieve
                 </p>
                 <div className="footer-social-info">
                   <a href="#">
                     <i className="fa fa-facebook" />
                   </a>
                   <a href="#">
-                    <i className="fa fa-twitter" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-dribbble" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-behance" />
-                  </a>
-                  <a href="#">
                     <i className="fa fa-instagram" />
+                  </a>
+                  <a href="#">
+                    <i className="fa fa-youtube" />
                   </a>
                 </div>
               </div>
